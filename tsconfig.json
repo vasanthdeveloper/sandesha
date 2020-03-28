@@ -1,0 +1,24 @@
+//   ___    __________   |  Vasanth Developer (Vasanth Srivatsa)
+//   __ |  / /___  __ \  |  ------------------------------------------------
+//   __ | / / __  / / /  |  https://github.com/vasanthdeveloper/sandesha.git
+//   __ |/ /  _  /_/ /   |
+//   _____/   /_____/    |  TypeScript run control
+//                       |
+
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "alwaysStrict": true,
+        "charset": "UTF-8",
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "module": "commonjs",
+        "newLine": "LF",
+        "outDir": "dist",
+        "pretty": true,
+        "removeComments": true,
+        "rootDir": "src",
+        "target": "ES6",
+        "resolveJsonModule": true
+    }
+}

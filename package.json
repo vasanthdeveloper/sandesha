@@ -1,0 +1,35 @@
+{
+    "name": "sandesha",
+    "description": "A cli for Discord Webhooks.",
+    "version": "0.0.0",
+    "license": "MIT",
+    "private": false,
+    "bin": "./dist/sandesha.js",
+    "author": {
+        "name": "Vasanth Developer",
+        "url": "https://vasanth.tech",
+        "email": "vasanth@vasanthdeveloper.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/vasanthdeveloper/sandesha.git"
+    },
+    "bugs": {
+        "url": "https://github.com/vasanthdeveloper/sandesha/issues",
+        "email": "vasanth@vasanthdeveloper.com"
+    },
+    "cpu": [
+        "x64"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "watch": "tsc -w"
+    },
+    "devDependencies": {
+        "@types/node": "^13.9.5",
+        "@typescript-eslint/eslint-plugin": "^2.25.0",
+        "@typescript-eslint/parser": "^2.25.0",
+        "eslint": "^6.8.0",
+        "typescript": "^3.8.3"
+    }
+}
