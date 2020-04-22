@@ -1,0 +1,25 @@
+name: CI
+
+on:
+    push:
+        branches:
+            - develop
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@master
+            - name: Setting Variables
+              run: echo ::set-env name=COMMIT_MESSAGE::$(git show-branch --no-name HEAD)
+            - name: Deploying to privateserver
+              uses: appleboy/ssh-action@master
+              env:
+                COMMIT_MESSAGE: ${{ env.COMMIT_MESSAGE }}
+              with:
+                host: ${{ secrets.HOST }}
+                username: ${{ secrets.USERNAME }}
+                key: ${{ secrets.KEY }}
+                port: ${{ secrets.PORT }}
+                envs: COMMIT_MESSAGE
+                script: bash /home/vasanth/serverfiles/common/scripts/deploy-sandesha.bash "$COMMIT_MESSAGE"
