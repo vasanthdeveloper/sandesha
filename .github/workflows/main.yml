@@ -12,12 +12,12 @@ jobs:
             - uses: actions/checkout@master
             - name: Setting Variables
               run: echo ::set-env name=COMMIT_MESSAGE::$(git show-branch --no-name HEAD)
-            - name: Deploying to privateserver
+            - name: Deploying to servers
               uses: appleboy/ssh-action@master
               env:
                 COMMIT_MESSAGE: ${{ env.COMMIT_MESSAGE }}
               with:
-                host: ${{ secrets.HOST }}
+                host: ${{ secrets.HOST }}, ${{ secrets.HOST2 }}
                 port: ${{ secrets.PORT }}
                 username: ${{ secrets.USERNAME }}
                 key: ${{ secrets.KEY }}
