@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
@@ -13,12 +12,13 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const paths_1 = require("./paths");
-const commands_1 = __importDefault(require("./commands"));
-function main() {
+const mkdirp_1 = __importDefault(require("mkdirp"));
+const env_paths_1 = __importDefault(require("env-paths"));
+exports.default = env_paths_1.default('sandesha', { suffix: '' });
+function createPaths() {
     return __awaiter(this, void 0, void 0, function* () {
-        yield paths_1.createPaths();
-        commands_1.default.parse(process.argv);
+        const paths = env_paths_1.default('sandesha', { suffix: '' });
+        yield mkdirp_1.default(paths.data);
     });
 }
-main();
+exports.createPaths = createPaths;

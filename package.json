@@ -25,8 +25,19 @@
         "build": "tsc",
         "watch": "tsc -w"
     },
+    "dependencies": {
+        "axios": "^0.19.2",
+        "commander": "^5.0.0",
+        "env-paths": "^2.2.0",
+        "handlebars": "^4.7.6",
+        "itivrutaha": "^0.1.1",
+        "mkdirp": "^1.0.4",
+        "url-parse": "^1.4.7"
+    },
     "devDependencies": {
+        "@types/mkdirp": "^1.0.0",
         "@types/node": "^13.9.5",
+        "@types/url-parse": "^1.4.3",
         "@typescript-eslint/eslint-plugin": "^2.25.0",
         "@typescript-eslint/parser": "^2.25.0",
         "eslint": "^6.8.0",

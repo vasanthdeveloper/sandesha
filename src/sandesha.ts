@@ -6,8 +6,12 @@
 //   _____/   /_____/    |  Entryfile for sandesha project
 //                       |
 
+import { createPaths } from './paths'
+import app from './commands'
+
 async function main(): Promise<void> {
-    console.log('Hello World!')
+    await createPaths()
+    app.parse(process.argv)
 }
 
 main()
