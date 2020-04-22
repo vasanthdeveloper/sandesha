@@ -21,7 +21,7 @@ function locateTemplate(templateString) {
         const absolute = path_1.default.isAbsolute(templateString);
         if (absolute) {
             if (fs_1.default.existsSync(`${templateString}.json`)) {
-                return templateString;
+                return `${templateString}.json`;
             }
             else {
                 logger_1.default.error(`A template with name "${path_1.default.basename(templateString)}.json" was not found at ${path_1.default.dirname(templateString)}`, 2);
