@@ -11,7 +11,7 @@ export default async function locateTemplate(templateString: string): Promise<st
     // check if the given path is absolute
     if (absolute) {
         // check if it's there
-        if (fs.existsSync(templateString)) {
+        if (fs.existsSync(`${templateString}.json`)) {
             return templateString
         } else {
             logger.error(`A template with name "${path.basename(templateString)}.json" was not found at ${path.dirname(templateString)}`, 2)

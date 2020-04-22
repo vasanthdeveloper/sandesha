@@ -20,7 +20,7 @@ function locateTemplate(templateString) {
     return __awaiter(this, void 0, void 0, function* () {
         const absolute = path_1.default.isAbsolute(templateString);
         if (absolute) {
-            if (fs_1.default.existsSync(templateString)) {
+            if (fs_1.default.existsSync(`${templateString}.json`)) {
                 return templateString;
             }
             else {
