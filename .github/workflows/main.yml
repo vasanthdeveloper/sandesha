@@ -18,8 +18,8 @@ jobs:
                 COMMIT_MESSAGE: ${{ env.COMMIT_MESSAGE }}
               with:
                 host: ${{ secrets.HOST }}
+                port: ${{ secrets.PORT }}
                 username: ${{ secrets.USERNAME }}
                 key: ${{ secrets.KEY }}
-                port: ${{ secrets.PORT }}
                 envs: COMMIT_MESSAGE
                 script: bash /home/vasanth/serverfiles/common/scripts/deploy-sandesha.bash "$COMMIT_MESSAGE"
