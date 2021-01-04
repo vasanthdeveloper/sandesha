@@ -26,7 +26,7 @@
         "watch": "tsc -w"
     },
     "dependencies": {
-        "axios": "^0.19.2",
+        "axios": "^0.21.1",
         "commander": "^5.1.0",
         "env-paths": "^2.2.0",
         "handlebars": "^4.7.6",
