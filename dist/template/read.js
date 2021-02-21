@@ -17,7 +17,7 @@ const path_1 = __importDefault(require("path"));
 const logger_1 = __importDefault(require("../logger"));
 function readTemplate(templatePath) {
     return __awaiter(this, void 0, void 0, function* () {
-        const templateContents = yield fs_1.default.promises.readFile(templatePath, { encoding: 'UTF-8' });
+        const templateContents = yield fs_1.default.promises.readFile(templatePath, { encoding: 'utf-8' });
         const defaultTemplate = {
             embeds: [],
             url: null,

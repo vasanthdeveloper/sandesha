@@ -12,6 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.createPaths = void 0;
 const mkdirp_1 = __importDefault(require("mkdirp"));
 const env_paths_1 = __importDefault(require("env-paths"));
 exports.default = env_paths_1.default('sandesha', { suffix: '' });

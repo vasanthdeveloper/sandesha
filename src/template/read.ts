@@ -5,7 +5,7 @@ import { TemplateImpl } from '../interfaces'
 import logger from '../logger'
 
 export default async function readTemplate(templatePath: string): Promise<any> {
-    const templateContents = await fs.promises.readFile(templatePath, { encoding: 'UTF-8' }) as string
+    const templateContents = await fs.promises.readFile(templatePath, { encoding: 'utf-8' }) as string
     
     // these defaultValues are used to validate the template
     const defaultTemplate: TemplateImpl = {

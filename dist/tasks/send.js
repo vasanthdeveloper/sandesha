@@ -20,7 +20,7 @@ function streamToString(stream) {
     return new Promise((resolve, reject) => {
         stream.on('data', chunk => chunks.push(chunk));
         stream.on('error', e => { reject(e); });
-        stream.on('end', () => resolve(Buffer.concat(chunks).toString('UTF-8')));
+        stream.on('end', () => resolve(Buffer.concat(chunks).toString('utf-8')));
     });
 }
 function send(templateString, command, globalOptions) {
